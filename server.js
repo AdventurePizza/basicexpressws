@@ -17,9 +17,10 @@ mongoose.createConnection('mongodb://forkchat:adventurecorp1@ds059207.mlab.com:5
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-app.use(function(req, res) {
+/*app.use(function(req, res) {
+  console.log('Entered this block');
   res.status(404).send({url: req.originalUrl + ' not found'})
-});
+});*/
 
 var routes = require('./api/routes/todoListRoutes'); //importing route
 routes(app); //register the route
