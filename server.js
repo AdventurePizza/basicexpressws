@@ -9,7 +9,7 @@ var express = require('express'),
 mongoose.Promise = global.Promise;
 //mongoose.connect('mongodb://forkchat:adventurecorp1@ds059207.mlab.com:59207/Tododb');
 
-mongoose.createConnection('mongodb://forkchat:adventurecorp1@ds059207.mlab.com:59207/Tododb', {
+mongoose.createConnection('mongodb://forkchat:adventurecorp1@ds059207.mlab.com:59207/forkchat', {
   useMongoClient: true,
   /* other options */
 });
