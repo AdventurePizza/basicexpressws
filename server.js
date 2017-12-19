@@ -5,20 +5,20 @@ var express = require('express'),
   Task = require('./api/models/todoListModel'), //created model loading here
   bodyParser = require('body-parser');
 
-// mongoose instance connection url connection
-//mongoose.Promise = global.Promise;
-//mongoose.connect('mongodb://forkchat:adventurecorp1@ds059207.mlab.com:59207/Tododb');
+  // mongoose instance connection url connection
+  //mongoose.Promise = global.Promise;
+  //mongoose.connect('mongodb://forkchat:adventurecorp1@ds059207.mlab.com:59207/Tododb');
 
-/*var promise = mongoose.createConnection('mongodb://forkchat:adventurecorp1@ds059207.mlab.com:59207/forkchat', {
-  useMongoClient: true,
-});*/
-mongoose.connect('mongodb://forkchat:adventurecorp1@ds059207.mlab.com:59207/forkchat', { useMongoClient:
-true });
-var db = mongoose.connection;
-db.on('error', console.error.bind(console, 'connection error:'));
-db.once('openUri', function() {
-// we're connected!
-});
+  /*var promise = mongoose.createConnection('mongodb://forkchat:adventurecorp1@ds059207.mlab.com:59207/forkchat', {
+    useMongoClient: true,
+  });*/
+  mongoose.connect('mongodb://forkchat:adventurecorp1@ds059207.mlab.com:59207/forkchat', { useMongoClient:
+    true });
+      var db = mongoose.connection;
+      db.on('error', console.error.bind(console, 'connection error:'));
+      db.once('openUri', function() {
+      // we're connected!
+  });
 
 /*promise.then(function(db) {
    console.log('Got here');
